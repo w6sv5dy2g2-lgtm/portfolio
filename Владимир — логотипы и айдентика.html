@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Владимир — логотипы и айдентика</title>
+<style>
+  :root{
+    --ink:#15161b; --paper:#eef0ec; --accent:#2e46ff; --accent-ink:#ffffff;
+    --line: rgba(21,22,27,0.14);
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#f1f1ec; --paper:#17181d; --accent:#6c7fff; --accent-ink:#0d0e12;
+      --line: rgba(241,241,236,0.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#f1f1ec; --paper:#17181d; --accent:#6c7fff; --accent-ink:#0d0e12;
+    --line: rgba(241,241,236,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
+  header.top{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
+    background:var(--paper); border-bottom:1px solid var(--line);
+  }
+  nav{display:flex; justify-content:space-between; align-items:center; padding:16px 24px; max-width:720px; margin:0 auto;}
+  .mark{display:flex; align-items:center; gap:8px; font-weight:700; letter-spacing:-0.01em;}
+  .mark svg{display:block;}
+  nav a{color:var(--ink); text-decoration:none; font-size:14px; opacity:0.75;}
+  nav a:hover{opacity:1;}
+
+  .hero{padding:64px 0 48px;}
+  .hero h1{
+    font-size:clamp(40px,9vw,72px); line-height:0.98; margin:0 0 20px;
+    letter-spacing:-0.03em; font-weight:800;
+  }
+  .hero h1 em{font-style:normal; color:var(--accent);}
+  .hero p{font-size:18px; line-height:1.55; max-width:46ch; opacity:0.82; margin:0;}
+
+  section{padding:40px 0; border-top:1px solid var(--line);}
+  h2{font-size:22px; font-weight:700; letter-spacing:-0.01em; margin:0 0 18px;}
+
+  .about p{font-size:16px; line-height:1.7; max-width:62ch; opacity:0.88;}
+
+  .services{display:flex; flex-direction:column;}
+  .service{display:flex; gap:16px; padding:18px 0; border-top:1px solid var(--line);}
+  .service:first-child{border-top:none;}
+  .service .dot{width:8px; height:8px; border-radius:50%; background:var(--accent); margin-top:8px; flex-shrink:0;}
+  .service h3{font-size:17px; margin:0 0 4px; font-weight:600;}
+  .service p{font-size:15px; margin:0; opacity:0.75; line-height:1.5;}
+
+  .steps{list-style:none; padding:0; margin:0; counter-reset:step;}
+  .steps li{
+    counter-increment:step; display:flex; gap:16px; padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .steps li:first-child{border-top:none;}
+  .steps li::before{
+    content:counter(step); font-weight:700; color:var(--accent);
+    width:24px; flex-shrink:0;
+  }
+  .steps p{margin:0; font-size:15px; line-height:1.5; opacity:0.85;}
+  .steps strong{display:block; font-size:16px; margin-bottom:2px;}
+
+  .gallery-empty{
+    border:1px dashed var(--line); border-radius:4px; padding:28px 20px;
+    font-size:15px; opacity:0.75; line-height:1.6;
+  }
+
+  .contact{text-align:left;}
+  .contact p{font-size:16px; line-height:1.6; max-width:50ch; opacity:0.85; margin:0 0 20px;}
+  .btn{
+    display:inline-block; background:var(--accent); color:var(--accent-ink);
+    text-decoration:none; font-weight:700; font-size:15px;
+    padding:13px 22px; border-radius:3px;
+  }
+  .btn:focus-visible, a:focus-visible, nav a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+  footer{padding:28px 0 40px; opacity:0.55; font-size:13px;}
+
+  @media (max-width:480px){
+    .wrap{padding:0 18px;}
+    nav{padding:14px 18px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <nav>
+    <div class="mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="3" stroke="var(--ink)" stroke-width="1.6"/><path d="M6 13.5L10 6l4 7.5" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Владимир
+    </div>
+    <a href="#contact">Написать</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <h1>Логотипы,<br>которые <em>запоминаются</em>.</h1>
+    <p>Разрабатываю логотипы и базовую айдентику для небольших брендов и личных проектов. Аккуратно, по делу, с правками до результата.</p>
+  </section>
+
+  <section class="about">
+    <h2>Обо мне</h2>
+    <p>Я начинающий дизайнер, увлечён созданием простых и чётких логотипов — тех, что легко узнать и легко использовать. Сейчас набираю первые проекты, чтобы расширять портфолио, поэтому к каждому заказу подхожу внимательно и даю честную обратную связь на каждом этапе.</p>
+  </section>
+
+  <section class="services">
+    <h2>Услуги</h2>
+    <div class="service">
+      <div class="dot"></div>
+      <div><h3>Логотип</h3><p>2–3 концепции на выбор, доработка по итогам правок, исходные файлы в векторе.</p></div>
+    </div>
+    <div class="service">
+      <div class="dot"></div>
+      <div><h3>Базовая айдентика</h3><p>Логотип + цветовая палитра + шрифтовая пара — минимальный набор, чтобы бренд выглядел цельно.</p></div>
+    </div>
+  </section>
+
+  <section class="process">
+    <h2>Как проходит работа</h2>
+    <ol class="steps">
+      <li><div><strong>Бриф</strong><p>Коротко обсуждаем, что за бренд, кому он адресован и какое впечатление должен производить.</p></div></li>
+      <li><div><strong>Концепции</strong><p>Присылаю несколько вариантов направления — выбираем, что ближе.</p></div></li>
+      <li><div><strong>Правки</strong><p>Дорабатываю выбранный вариант по комментариям, пока результат не устроит.</p></div></li>
+      <li><div><strong>Файлы</strong><p>Передаю финальные файлы в нужных форматах.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="work">
+    <h2>Работы</h2>
+    <div class="gallery-empty">Портфолио пополняется — первые проекты скоро появятся здесь.</div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Контакт</h2>
+    <p>Опишите, какой логотип нужен, — отвечу и обсудим детали.</p>
+    <a class="btn" href="mailto:ВАШ_EMAIL@example.com">Написать мне</a>
+  </section>
+
+  <footer>© Владимир, логотипы и айдентика.</footer>
+
+</main>
+</body>
+</html>
